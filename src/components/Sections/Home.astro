@@ -1,0 +1,28 @@
+---
+import vscodeLogo from "../../../public/vscode-icon.png";
+import ImageLogo from "../ImageLogo.astro";
+---
+
+<section id="home" class="h-screen w-full relative">
+  <div class="text-center h-full w-full grid place-content-center">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl text-[#3EA9F0] font-bold my-5">
+      Desarrollador front-end
+    </h1>
+    <p
+      class="text-xl lg:text-3xl md:text-2xl text-[#B7B7B7] font-semibold mx-3 md:m-0"
+    >
+      Hola, soy <span class="text-white">Viruz</span>, entusiasta del desarrollo
+      web
+    </p>
+  </div>
+  <div
+    class="top-0 bottom-0 absolute grid place-content-center h-full w-full z-[-1] blur-3xl"
+  >
+    <ImageLogo
+      className="object-cover w-[90%] h-[90%]"
+      mobileImgUrl={vscodeLogo}
+      desktopImgUrl={vscodeLogo}
+      alt="user profile picture"
+    />
+  </div>
+</section>
