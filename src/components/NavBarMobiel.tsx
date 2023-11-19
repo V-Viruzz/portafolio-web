@@ -1,4 +1,11 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import MenuIcon from "./Icons/MenuIcon"
+import CloseIcon from "./Icons/CloseIcon"
+
+const MIN_WIDTH = '768px';
+const HIDDEN = 'hidden';
+const AUTO = 'auto';
+
 
 function NavBarMobiel() {
   const [showMenu, setShowMenu] = useState(false)
@@ -7,51 +14,52 @@ function NavBarMobiel() {
     setShowMenu(!showMenu)
   }
 
+  useEffect(() => {
+    let body = document.getElementById('page')
+    if (body !== null) {
+      body.style.overflow = showMenu ? HIDDEN : AUTO;
+    }
+
+  }, [showMenu])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.matchMedia(`(min-width: ${MIN_WIDTH})`).matches) {
+        setShowMenu(false)
+      }
+    }
+
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
     <>
       <div className="justify-end flex md:hidden">
         <button
           className={`m-3 fixed ${showMenu ? 'hidden' : 'block'}`}
           onClick={handleClick}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width={48}
-            height={48}
-            fill="none"
-            viewBox="0 0 24 24"
-          >
-            <path
-              fill="#fff"
-              d="M20.746 3.329a1 1 0 0 0-1.415 0l-7.294 7.294-7.294-7.294a1 1 0 1 0-1.414 1.414l7.294 7.294-7.294 7.294a1 1 0 0 0 1.414 1.415l7.294-7.295 7.294 7.295a1 1 0 0 0 1.415-1.415l-7.295-7.294 7.295-7.294a1 1 0 0 0 0-1.414Z"
-            />
-          </svg>
+          <MenuIcon width={45} height={45} />
         </button>
       </div>
 
-      <nav className={`justify-center md:hidden ${showMenu ? 'flex' : 'hidden'}`}>
+      <nav className={`justify-center md:hidden transition-all duration-100 ${showMenu ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <ul
-          className="w-full h-full bg-[#000000d5] fixed rounded-xl flex flex-col gap-10 items-center [&>li]:text-xl hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-all"
+          className={`transition-all duration-500  w-full h-full bg-[#000000d5] fixed rounded-xl flex flex-col gap-10 items-center [&>li]:text-xl hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-all ${showMenu ? 'opacity-100' : 'opacity-0'}`}
         >
           <li className="flex justify-end w-full pt-3 pr-3">
             <button onClick={handleClick}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width={40}
-                height={40}
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill="#fff"
-                  d="M20.746 3.329a1 1 0 0 0-1.415 0l-7.294 7.294-7.294-7.294a1 1 0 1 0-1.414 1.414l7.294 7.294-7.294 7.294a1 1 0 0 0 1.414 1.415l7.294-7.295 7.294 7.295a1 1 0 0 0 1.415-1.415l-7.295-7.294 7.295-7.294a1 1 0 0 0 0-1.414Z"
-                />
-              </svg>
+              <CloseIcon width={42} height={42} />
             </button>
           </li>
-          <li>Inicio</li>
-          <li>Sobre mi</li>
-          <li>Proyectos</li>
-          <li>Contacto</li>
+          <li><a href="#home" onClick={handleClick}>Inicio</a></li>
+          <li><a href="#about-me" onClick={handleClick}>Sobre mi</a></li>
+          <li><a href="#proyects" onClick={handleClick}>Proyectos</a></li>
+          <li><a href="#abilities" onClick={handleClick}>Habilidades</a></li>
         </ul>
       </nav>
     </>
