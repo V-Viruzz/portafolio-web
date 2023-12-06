@@ -1,14 +1,14 @@
 ---
-import GithubIcon from "./Icons/GithubIcon.astro";
+import GithubIcon from "./Icons/GithubIcon.tsx";
 import LinkedinIcon from "./Icons/LinkedinIcon.astro";
 import EmailIcon from "./Icons/EmailIcon.astro";
-import NavBarMobiel from './NavBarMobiel'
+import NavBarMobiel from "./NavBarMobiel";
 ---
 
 <header class="z-30 relative text-white">
-  <nav class="justify-start lg:justify-center hidden md:flex">
+  <nav class="justify-start lg:justify-center hidden md:flex text-lg">
     <ul
-      class="m-5 w-[30rem] h-[4.5rem] bg-[#151515] fixed rounded-xl flex justify-evenly items-center hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-all"
+      class="desktop-nav transition-colors delay-150 duration-700 m-5 w-[30rem] h-[4.5rem] bg-[#151515] fixed rounded-xl flex justify-evenly items-center hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-all"
     >
       <li><a href="#home">Inicio</a></li>
       <li><a href="#about-me">Sobre mi</a></li>
@@ -19,14 +19,49 @@ import NavBarMobiel from './NavBarMobiel'
 
   <nav class="justify-end hidden md:flex">
     <ul
-      class="w-[13rem] h-[4.5rem] bg-[#151515] fixed flex items-center justify-evenly rounded-xl mr-5 mt-5"
+      class="desktop-nav-social w-[13rem] h-[4.5rem] bg-[#151515] fixed flex items-center justify-evenly rounded-xl mr-5 mt-5"
     >
-      <li><GithubIcon width={38} height={38} /></li>
-      <li><LinkedinIcon width={53} height={53} /></li>
-      <li><EmailIcon width={38} height={38} /></li>
+      <li>
+        <a href="https://github.com/Viruzzz0"
+          ><GithubIcon width={38} height={38} />
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/nahuel-sinka-831483197/">
+          <LinkedinIcon width={53} height={53} />
+        </a>
+      </li>
+      <li>
+        <a href="mailto:nahuelsinka@gmail.com" target="_blank">
+          <EmailIcon width={38} height={38} />
+        </a>
+      </li>
     </ul>
   </nav>
 
-  <NavBarMobiel client:media="(max-width: 768px)"/>
-  
+  <NavBarMobiel client:media="(max-width: 768px)" />
 </header>
+
+<style>
+  header > nav .blurNav {
+    background-color: #00000042;
+    backdrop-filter: blur(8px);
+  }
+</style>
+
+<script>
+  const nav = document.querySelector(".desktop-nav");
+  const navSocial = document.querySelector(".desktop-nav-social");
+
+  window.addEventListener("scroll", () => {
+    if (navSocial && nav !== null) {
+      if (window.scrollY > 190) {
+        nav.classList.add("blurNav");
+        navSocial.classList.add("blurNav");
+      } else {
+        nav.classList.remove("blurNav");
+        navSocial.classList.remove("blurNav");
+      }
+    }
+  });
+</script>

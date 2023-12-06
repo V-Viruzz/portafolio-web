@@ -6,8 +6,8 @@ const NodejsIcon = (props: SVGProps<SVGSVGElement>) => (
     xmlSpace="preserve"
     width="1em"
     height="1em"
-    fill="#fff"
-    stroke="#fff"
+    fill="currentColor"
+    stroke="currentColor"
     viewBox="0 0 512 512"
     {...props}
   >

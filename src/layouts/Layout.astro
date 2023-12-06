@@ -70,35 +70,42 @@ const { title } = Astro.props;
 		background: linear-gradient(112deg, #1f1f1f, #121212);
 	}
 
-	.Ball {
-		animation: effect-flash 3.30s ease-out alternate-reverse infinite;
-
-		/* filter: blur(39px); */
+	.TransitionImage {
+		animation: cardTransitionImage .5s ease-out ;
 	}
-	.Ball::after {
-		animation: effect-flash-2 3.30s ease-out alternate-reverse infinite;
-		position: absolute;
-		content: "";
-		width: 100%;
-		height: 100%;
-		border-radius: 50px;
-		top: 0;
-		left: 0;
-		background-color: #3ea9f060;
+	.TransitionOpacity {
+		animation: cardTransitionText .5s ease-out ;
 	}
 
-	@keyframes effect-flash {
-		from {
+	@keyframes cardTransitionImage {
+		0% {
+			opacity: 0;
+			transform: translateX(5.5rem);
 		}
-		to {
-			scale: 1.5;
+		50% {
+			opacity: .5;
+			transform: translateX(0);
+
+		}
+		100% {
+			opacity: 1;
 		}
 	}
-	@keyframes effect-flash-2 {
-		from {
+	@keyframes cardTransitionText {
+		0% {
+			opacity: 0;
 		}
-		to {
-			scale: 2;
+		50% {
+			opacity: .5;
+		}
+		100% {
+			opacity: 1;
 		}
 	}
+
+	@media screen and (max-width: 600px) {
+  .TransitionImage {
+    animation: cardTransitionText .5s ease-out
+  }
+}
 </style>

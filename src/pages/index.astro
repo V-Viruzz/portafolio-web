@@ -14,3 +14,32 @@ import Footer from "../components/Footer.astro";
 	<MyAbilities />
 	<Footer />
 </Layout>
+
+<style is:global>
+	
+	section {
+		view-timeline-name: --effe;
+		view-timeline-axis: block;
+
+		animation-timeline: --effe;
+		animation-name: effectSection;
+		animation-range: entry 20% cover 50%;
+		animation-fill-mode: both;
+	}
+
+
+	@keyframes effectSection {
+		from {
+			opacity: 0;
+			scale: 77%;
+			line-height: 3;
+		}
+
+		to {
+			opacity: 1;
+			scale: 100%;
+			line-height: 1.5;
+		}
+	}
+
+</style>
