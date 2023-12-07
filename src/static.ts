@@ -1,3 +1,10 @@
+import urlImageNintendoSwitch from './assets/nintendo-switch-ui.webp'
+import urlImageCotillon from './assets/cotillon.webp'
+import urlImageLuxer from './assets/luxer.webp'
+import urlImageCollectionx from './assets/collectionx.webp'
+import urlImageZimg from './assets/zimg.webp'
+import urlImagePomotimerx from './assets/pomotimerx.webp'
+
 const WEBTOOLS = {
   REACT: 'react',
   TAILWIND: 'tailwind',
@@ -11,7 +18,7 @@ const WEBTOOLS = {
 export const myProyect = [
   {
     id: '01',
-    urlImage: 'https://cmuheoxswnbhktzwkgjq.supabase.co/storage/v1/object/public/my/nintendo-switch-ui.webp',
+    urlImage: urlImageNintendoSwitch.src,
     urlRepository: 'https://github.com/Viruzzz0/ui-nintendo-switch',
     urlPage: 'https://ui-nintendo-switch.vercel.app/',
     name: 'Nintendo Switch UI',
@@ -20,7 +27,7 @@ export const myProyect = [
   },
   {
     id: '02',
-    urlImage: 'https://cmuheoxswnbhktzwkgjq.supabase.co/storage/v1/object/public/my/cotillon.webp',
+    urlImage: urlImageCotillon.src,
     urlRepository: 'https://github.com/Viruzzz0/cotillon',
     urlPage: 'https://cotillonsinka.vercel.app',
     name: 'Cotillon',
@@ -29,7 +36,7 @@ export const myProyect = [
   },
   {
     id: '03',
-    urlImage: 'https://cmuheoxswnbhktzwkgjq.supabase.co/storage/v1/object/public/my/luxer.webp',
+    urlImage: urlImageLuxer.src,
     urlRepository: 'https://github.com/Viruzzz0/blog-client',
     urlPage: 'https://luxer.netlify.app',
     name: 'Luxer X',
@@ -38,7 +45,7 @@ export const myProyect = [
   },
   {
     id: '04',
-    urlImage: 'https://cmuheoxswnbhktzwkgjq.supabase.co/storage/v1/object/public/my/collectionx.webp',
+    urlImage: urlImageCollectionx.src,
     urlRepository: 'https://github.com/Viruzzz0/collections-x',
     urlPage: 'https://collectionsx.netlify.app',
     name: 'Collection X',
@@ -47,7 +54,7 @@ export const myProyect = [
   },
   {
     id: '05',
-    urlImage: 'https://cmuheoxswnbhktzwkgjq.supabase.co/storage/v1/object/public/my/zimg.webp',
+    urlImage: urlImageZimg.src,
     urlRepository: 'https://github.com/Viruzzz0/zimg',
     urlPage: 'https://zimg-x.vercel.app',
     name: 'Zimg',
@@ -56,7 +63,7 @@ export const myProyect = [
   },
   {
     id: '06',
-    urlImage: 'https://cmuheoxswnbhktzwkgjq.supabase.co/storage/v1/object/public/my/pomotimerx.webp',
+    urlImage: urlImagePomotimerx.src,
     urlRepository: 'https://github.com/Viruzzz0/pomodoro',
     urlPage: 'https://pomotimerx.netlify.app',
     name: 'Pomotimer X',

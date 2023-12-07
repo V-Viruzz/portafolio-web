@@ -52,10 +52,10 @@ function Card() {
             <div className='bg-black rounded-3xl w-full h-full absolute top-0 opacity-0 group-hover:opacity-50 transition-opacity'>
             </div>
             <div className='w-full h-full absolute top-0 justify-center items-center gap-5 flex opacity-0 group-hover:opacity-100 transition-opacity '>
-              <a href={urlRepository}>
+              <a href={urlRepository} aria-label="Ver repositorio en GitHub">
                 <GithubIcon width={60} height={60} />
               </a>
-              <a href={urlPage}>
+              <a href={urlPage} aria-label="Abrir enlace externo">
                 <ExternalLinkIcon width={60} height={60} />
               </a>
             </div>
