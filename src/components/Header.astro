@@ -5,10 +5,10 @@ import EmailIcon from "./Icons/EmailIcon.astro";
 import NavBarMobiel from "./NavBarMobiel";
 ---
 
-<header class="z-30 relative text-white">
+<header class="z-30 relative font-medium">
   <nav class="justify-start lg:justify-center hidden md:flex text-lg">
     <ul
-      class="desktop-nav transition-colors delay-150 duration-700 m-5 w-[30rem] h-[4.5rem] bg-[#151515] fixed rounded-xl flex justify-evenly items-center hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-all"
+      class="desktop-nav transition-colors delay-150 duration-700 m-5 w-[30rem] h-[4.5rem] dark:bg-[#181818] bg-zinc-100 fixed rounded-xl flex justify-evenly items-center hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-all"
     >
       <li><a href="#home">Inicio</a></li>
       <li><a href="#about-me">Sobre mi</a></li>
@@ -19,7 +19,7 @@ import NavBarMobiel from "./NavBarMobiel";
 
   <nav class="justify-end hidden md:flex">
     <ul
-      class="desktop-nav-social w-[13rem] h-[4.5rem] bg-[#151515] fixed flex items-center justify-evenly rounded-xl mr-5 mt-5"
+      class="desktop-nav-social w-[13rem] h-[4.5rem] dark:bg-[#181818] bg-zinc-100 fixed flex items-center justify-evenly rounded-xl mr-5 mt-5"
     >
       <li>
         <a href="https://github.com/Viruzzz0"
@@ -46,6 +46,12 @@ import NavBarMobiel from "./NavBarMobiel";
   header > nav .blurNav {
     background-color: #00000042;
     backdrop-filter: blur(8px);
+  }
+
+  @media (prefers-color-scheme: light) {
+    header > nav .blurNav {
+      background-color: #e1e1e142
+    }
   }
 </style>
 

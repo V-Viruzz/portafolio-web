@@ -6,21 +6,22 @@ import TypescriptIcon from "../Icons/TypescriptIcon";
 import GitIcon from "../Icons/GitIcon";
 import NextjsIcon from "../Icons/NextjsIcon";
 import MongodbIcon from "../Icons/MongodbIcon";
+import FigmaIcon from "../Icons/FigmaIcon";
 ---
 
 <section id="abilities" class="w-full grid place-content-center">
   <div class="text-start">
-    <h2 class="text-center text-4xl md:text-[40px] font-bold m-12 text-white">
+    <h2 class="text-center text-4xl md:text-[40px] font-bold m-12">
       Mis Habilidades
     </h2>
   </div>
-  <div 
-    class="
+  <div
+    class="text-inherit
       flex justify-center gap-6 flex-col md:flex-row items-center text-xl
       hover:[&>div>svg]:scale-125 [&>div>svg]:transition-transform [&>div]:relative
       [&>div>span]:absolute md:[&>div>span]:left-1/2 md:[&>div>span]:-translate-x-1/2
       md:[&>div>span]:top-[5.3rem] [&>div>span]:top-1/2 [&>div>span]:-translate-y-1/2 [&>div>span]:left-20
-      [&>div>span]:opacity-0 [&>div>span]:bg-neutral-800 [&>div>span]:px-2 [&>div>span]:py-[1px]
+      [&>div>span]:opacity-0 dark:[&>div>span]:bg-neutral-800 [&>div>span]:bg-neutral-200 [&>div>span]:px-2 [&>div>span]:py-[1px]
       [&>div>span]:rounded-lg [&>div>span]:z-20"
   >
     <div class="group">
@@ -50,6 +51,10 @@ import MongodbIcon from "../Icons/MongodbIcon";
     <div class="group">
       <NodejsIcon width={54} height={54} />
       <span class="group-hover:opacity-100">NodeJS</span>
+    </div>
+    <div class="group">
+      <FigmaIcon width={54} height={54} />
+      <span class="group-hover:opacity-100">Figma</span>
     </div>
   </div>
 </section>

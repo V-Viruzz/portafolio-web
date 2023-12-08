@@ -49,7 +49,7 @@ function NavBarMobiel() {
 
       <nav className={`justify-center md:hidden ease-out transition-opacity duration-100 ${showMenu ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
         <ul
-          className='duration-500  w-full h-full bg-[#000000d5] fixed rounded-xl flex flex-col gap-10 items-center [&>li]:text-xl hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-colors'
+          className='dark:bg-[#000000d5] dark:backdrop-blur-0 bg-[#efefefd5] backdrop-blur-sm duration-500 w-full h-full fixed rounded-xl flex flex-col gap-10 items-center [&>li]:text-xl hover:[&>li]:text-[var(--color-text-1)] hover:[&>li]:transition-colors'
         >
           <li className="flex justify-end w-full pt-3 pr-3">
             <button onClick={handleClick}>

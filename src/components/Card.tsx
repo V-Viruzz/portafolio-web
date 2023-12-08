@@ -51,7 +51,7 @@ function Card() {
             />
             <div className='bg-black rounded-3xl w-full h-full absolute top-0 opacity-0 group-hover:opacity-50 transition-opacity'>
             </div>
-            <div className='w-full h-full absolute top-0 justify-center items-center gap-5 flex opacity-0 group-hover:opacity-100 transition-opacity '>
+            <div className='text-white w-full h-full absolute top-0 justify-center items-center gap-5 flex opacity-0 group-hover:opacity-100 transition-opacity '>
               <a href={urlRepository} aria-label="Ver repositorio en GitHub">
                 <GithubIcon width={60} height={60} />
               </a>
@@ -68,7 +68,7 @@ function Card() {
               <h3 className='text-2xl md:text-3xl font-bold'>
                 {name}
               </h3>
-              <p className='text-[#999999] text-md md:text-lg font-semibold w-[90%] my-3'>
+              <p className='dark:text-[#999999] text-[#787878] text-md md:text-lg font-semibold w-[90%] my-3'>
                 {description}
               </p>
             </div>
@@ -82,7 +82,7 @@ function Card() {
             className='
               flex gap-4 mt-4 flex-wrap
               [&>div]:relative [&>div>span]:absolute [&>div>span]:left-1/2 [&>div>span]:-translate-x-1/2
-              [&>div>span]:opacity-0 [&>div>span]:bg-neutral-900 [&>div>span]:px-2 [&>div>span]:py-[1px]
+              [&>div>span]:opacity-0 dark:[&>div>span]:bg-neutral-900 [&>div>span]:bg-neutral-300 [&>div>span]:px-2 [&>div>span]:py-[1px]
               md:[&>div>span]:top-14 [&>div>span]:top-12 [&>div>span]:rounded-lg [&>div>span]:z-20 text-xl'
           >
             {
@@ -101,17 +101,17 @@ function Card() {
             }
           </div>
         </div>
-        <div className='font-bold text-8xl flex  sm:hidden justify-center items-center'>
-          <span className="text-transparent titleEffect font-extrabold text-7xl">
+        <div className='font-bold text-8xl flex sm:hidden justify-center items-center'>
+          <span className="dark:text-transparent text-[#6b6b6b] titleEffect font-extrabold text-7xl">
             {id}
           </span>
         </div>
         <div className='flex justify-center items-center gap-2 text-neutral-500 '>
           <button onClick={navigatePrevious}>
-            <ArrowIcon className='hover:text-white' width={40} height={40} />
+            <ArrowIcon className='dark:hover:text-white hover:text-black' width={40} height={40} />
           </button>
           <button onClick={navigateNext}>
-            <ArrowIcon className='hover:text-white' width={40} height={40} transform="scale(-1 1)" />
+            <ArrowIcon className='dark:hover:text-white hover:text-black' width={40} height={40} transform="scale(-1 1)" />
           </button>
         </div>
 

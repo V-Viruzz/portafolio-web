@@ -1,66 +1,64 @@
-
 <section id="home" class="h-screen w-full relative">
   <div class="text-center h-full w-full grid place-content-center">
-    <h1 class="text-5xl md:text-6xl lg:text-7xl text-[#3EA9F0] font-bold my-5">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl dark:text-[#3EA9F0] text-[#3e94f0]  font-bold my-5">
       Desarrollador front-end
     </h1>
     <p
-      class="text-xl lg:text-3xl md:text-2xl text-[#B7B7B7] font-semibold mx-3 md:m-0"
+      class="text-xl lg:text-3xl md:text-2xl dark:text-[#B7B7B7] text-[#4e4e4e] font-semibold mx-3 md:m-0"
     >
-      Hola, soy <span class="text-white">Viruz</span>, entusiasta del desarrollo
+      Hola, soy <span class="dark:text-white text-black dark:font-semibold font-bold">Viruz</span>, entusiasta del desarrollo
       web
     </p>
   </div>
   <div
-    class="top-0 bottom-0 absolute grid place-content-center h-full w-full z-[-1] "
+    class="top-0 bottom-0 absolute grid place-content-center h-full w-full z-[-1]"
   >
-    <div class="Balls [&>span]:bg-[#3ea9f0a2] grid grid-rows-1 grid-cols-3  md:grid-cols-4 items-center gap-8">
-     <span
-        class="w-10 h-10 md:w-20 md:h-20 rounded-full outline outline-[14px]	outline-[#3e8bf072]"
+    <div
+      class="Balls [&>span]:bg-[#3ea9f0a2] grid grid-rows-1 grid-cols-3 md:grid-cols-4 items-center gap-8"
+    >
+      <span
+        class="w-10 h-10 md:w-20 md:h-20 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
-     <span
-        class="w-16 h-16  md:w-28 md:h-28 rounded-full outline outline-[14px]	outline-[#3e8bf072]"
+      <span
+        class="w-16 h-16 md:w-28 md:h-28 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
-     <span
-        class="w-16 h-16  md:w-28 md:h-28 rounded-full outline outline-[14px]	outline-[#3e8bf072]"
+      <span
+        class="w-16 h-16 md:w-28 md:h-28 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
-    <span
-        class="hidden md:block w-10 h-10  md:w-20 md:h-20 rounded-full outline outline-[14px]	outline-[#3e8bf072]"
+      <span
+        class="hidden md:block w-10 h-10 md:w-20 md:h-20 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
-  </div>
-
+    </div>
   </div>
 </section>
 
-
 <style>
-  
-	.Balls {
-		filter: blur(78px);
-	}
-	.Balls > :first-child {
-		animation: effect-flash 3.3s ease-out 1.4s alternate infinite;
-	}
-	.Balls > :nth-child(2) {
-		animation: effect-flash 3.3s ease-out alternate infinite;
-	}
-	.Balls > :nth-child(3) {
-		animation: effect-flash 3.3s ease-out 0.6s alternate infinite;
-	}
-	.Balls > :nth-child(4) {
-		animation: effect-flash 3.3s ease-out 2.6s alternate infinite;
-	}
+  .Balls {
+    filter: blur(78px);
+  }
+  .Balls > :first-child {
+    animation: effect-flash 3.3s ease-out 1.4s alternate infinite;
+  }
+  .Balls > :nth-child(2) {
+    animation: effect-flash 3.3s ease-out alternate infinite;
+  }
+  .Balls > :nth-child(3) {
+    animation: effect-flash 3.3s ease-out 0.6s alternate infinite;
+  }
+  .Balls > :nth-child(4) {
+    animation: effect-flash 3.3s ease-out 2.6s alternate infinite;
+  }
 
-	@keyframes effect-flash {
-		from {
-			scale: 1;
-		}
-		to {
-			scale: 2;
-		}
-	}
+  @keyframes effect-flash {
+    from {
+      scale: 1;
+    }
+    to {
+      scale: 2;
+    }
+  }
 </style>
