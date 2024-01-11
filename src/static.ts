@@ -31,7 +31,7 @@ export const myProyect = [
     urlRepository: 'https://github.com/Viruzzz0/cotillon',
     urlPage: 'https://cotillonsinka.vercel.app',
     name: 'Cotillon',
-    description: 'Pomodoro, temporizador y chronometro, todo junto',
+    description: 'Sitio web dedicado a productos de cotillón para celebraciones',
     webTools: [WEBTOOLS.TYPESCRIPT, WEBTOOLS.NEXTJS, WEBTOOLS.TAILWIND,]
   },
   {
@@ -40,7 +40,7 @@ export const myProyect = [
     urlRepository: 'https://github.com/Viruzzz0/blog-client',
     urlPage: 'https://luxer.netlify.app',
     name: 'Luxer X',
-    description: 'Pomodoro, temporizador y chronometro, todo junto',
+    description: 'Pequeña red social con usuarios y mensajes privados',
     webTools: [WEBTOOLS.REACT, WEBTOOLS.NODEJS, WEBTOOLS.TYPESCRIPT, WEBTOOLS.MONGODB, WEBTOOLS.TAILWIND]
   },
   {
@@ -49,7 +49,7 @@ export const myProyect = [
     urlRepository: 'https://github.com/Viruzzz0/collections-x',
     urlPage: 'https://collectionsx.netlify.app',
     name: 'Collection X',
-    description: 'Pomodoro, temporizador y chronometro, todo junto',
+    description: 'App donde puedes guardar todos tus enlaces y ordenarlos',
     webTools: [WEBTOOLS.REACT, WEBTOOLS.NODEJS, WEBTOOLS.MONGODB]
   },
   {
@@ -58,7 +58,7 @@ export const myProyect = [
     urlRepository: 'https://github.com/Viruzzz0/zimg',
     urlPage: 'https://zimg-x.vercel.app',
     name: 'Zimg',
-    description: 'Pomodoro, temporizador y chronometro, todo junto',
+    description: 'Cambiar la resolución y formato, todo en el mismo sitio',
     webTools: [WEBTOOLS.REACT, WEBTOOLS.NODEJS, WEBTOOLS.MONGODB]
   },
   {
