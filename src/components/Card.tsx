@@ -12,20 +12,14 @@ import ExternalLinkIcon from './Icons/ExternalLinkIcon.tsx'
 
 function Card() {
   const [select, setSelect] = useState(0)
-  const [preloadedImage, setPreloadedImage] = useState('');
   const { urlPage, urlRepository, urlImage, name, description, webTools, id } = myProyect[select]
 
   useEffect(() => {
     const nextProyect = myProyect[select + 1]
-    console.log(nextProyect)
 
     if (select + 1 < myProyect.length) {
       const loadImage = new Image();
       loadImage.src = nextProyect.urlImage
-      loadImage.onload = () => {
-        console.log('Done loading image')
-        setPreloadedImage(loadImage.src)
-      }
     }
 
   }, [select])
@@ -43,14 +37,12 @@ function Card() {
   const navigatePrevious = () => {
     if (select > 0) {
       setSelect(select - 1)
-      setPreloadedImage('')
     }
   }
-  
+
   const navigateNext = () => {
     if (select < myProyect.length - 1) {
       setSelect(select + 1)
-      setPreloadedImage('')
     }
   }
 
