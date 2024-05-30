@@ -14,18 +14,18 @@
     class="top-0 bottom-0 absolute grid place-content-center h-full w-full z-[-1]"
   >
     <div
-      class="Balls [&>span]:bg-[#3ea9f0a2] grid grid-rows-1 grid-cols-3 md:grid-cols-4 items-center gap-8"
+      class="Balls [&>span]:bg-[#3ea9f0a2] grid grid-rows-1 grid-cols-3 md:grid-cols-4 items-center gap-14"
     >
       <span
         class="w-10 h-10 md:w-20 md:h-20 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
       <span
-        class="w-16 h-16 md:w-28 md:h-28 rounded-full outline outline-[14px] outline-[#3e8bf072]"
+        class="w-16 h-16 md:w-20 md:h-20 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
       <span
-        class="w-16 h-16 md:w-28 md:h-28 rounded-full outline outline-[14px] outline-[#3e8bf072]"
+        class="w-16 h-16 md:w-20 md:h-20 rounded-full outline outline-[14px] outline-[#3e8bf072]"
       >
       </span>
       <span
@@ -41,13 +41,13 @@
     filter: blur(78px);
   }
   .Balls > :first-child {
-    animation: effect-flash 3.3s ease-out 1.4s alternate infinite;
+    animation: effect-flash 2s ease-out 1.4s alternate infinite;
   }
   .Balls > :nth-child(2) {
-    animation: effect-flash 3.3s ease-out alternate infinite;
+    animation: effect-flash 3.3s ease-in alternate infinite;
   }
   .Balls > :nth-child(3) {
-    animation: effect-flash 3.3s ease-out 0.6s alternate infinite;
+    animation: effect-flash 3s ease-in 0.6s alternate infinite;
   }
   .Balls > :nth-child(4) {
     animation: effect-flash 3.3s ease-out 2.6s alternate infinite;

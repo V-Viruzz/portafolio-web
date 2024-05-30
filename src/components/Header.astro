@@ -23,17 +23,29 @@ import NavBarMobiel from "./NavBarMobiel";
     >
       <li>
         <a href="https://github.com/V-Viruzz"
-          ><GithubIcon width={38} height={38} />
+          ><GithubIcon
+            className="hover:text-neutral-500 transition-colors"
+            width={38}
+            height={38}
+          />
         </a>
       </li>
       <li>
         <a href="https://www.linkedin.com/in/nahuel-david-sinka/">
-          <LinkedinIcon width={53} height={53} />
+          <LinkedinIcon
+            class="hover:text-neutral-500 transition-colors"
+            width={53}
+            height={53}
+          />
         </a>
       </li>
       <li>
         <a href="mailto:nahuelsinka@gmail.com" target="_blank">
-          <EmailIcon width={38} height={38} />
+          <EmailIcon
+            class="hover:text-neutral-500 transition-colors"
+            width={38}
+            height={38}
+          />
         </a>
       </li>
     </ul>
@@ -50,7 +62,7 @@ import NavBarMobiel from "./NavBarMobiel";
 
   @media (prefers-color-scheme: light) {
     header > nav .blurNav {
-      background-color: #e1e1e142
+      background-color: #e1e1e142;
     }
   }
 </style>

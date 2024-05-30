@@ -1,9 +1,9 @@
-import urlImageNintendoSwitch from './assets/nintendo-switch-ui.webp'
-import urlImageCotillon from './assets/cotillon.webp'
-import urlImageLuxer from './assets/luxer.webp'
-import urlImageCollectionx from './assets/collectionx.webp'
-import urlImageZimg from './assets/zimg.webp'
-import urlImagePomotimerx from './assets/pomotimerx.webp'
+import urlImageNintendoSwitch from '../public/images/nintendo-switch-ui.webp'
+import urlImageCotillon from '../public/images/cotillon.webp'
+import urlImageLuxer from '../public/images/luxer.webp'
+import urlImageCollectionx from '../public/images/collectionx.webp'
+import urlImageZimg from '../public/images/zimg.webp'
+import urlImagePomotimerx from '../public/images/pomotimerx.webp'
 
 const WEBTOOLS = {
   REACT: 'react',
