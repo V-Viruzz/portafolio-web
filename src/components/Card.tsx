@@ -6,13 +6,30 @@ import MongodbIcon from './Icons/MongodbIcon'
 import TypescriptIcon from './Icons/TypescriptIcon'
 import NextjsIcon from './Icons/NextjsIcon'
 import { myProyect } from '../static'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import GithubIcon from './Icons/GithubIcon.tsx'
 import ExternalLinkIcon from './Icons/ExternalLinkIcon.tsx'
 
 function Card() {
   const [select, setSelect] = useState(0)
+  const [preloadedImage, setPreloadedImage] = useState('');
   const { urlPage, urlRepository, urlImage, name, description, webTools, id } = myProyect[select]
+
+  useEffect(() => {
+    const nextProyect = myProyect[select + 1]
+    console.log(nextProyect)
+
+    if (select + 1 < myProyect.length) {
+      const loadImage = new Image();
+      loadImage.src = nextProyect.urlImage
+      loadImage.onload = () => {
+        console.log('Done loading image')
+        setPreloadedImage(loadImage.src)
+      }
+    }
+
+  }, [select])
+
 
   const toolIcons = {
     react: ReactIcon,
@@ -26,12 +43,14 @@ function Card() {
   const navigatePrevious = () => {
     if (select > 0) {
       setSelect(select - 1)
+      setPreloadedImage('')
     }
   }
-
+  
   const navigateNext = () => {
     if (select < myProyect.length - 1) {
       setSelect(select + 1)
+      setPreloadedImage('')
     }
   }
 
@@ -42,7 +61,7 @@ function Card() {
         <div
           className='TransitionImage w-full box-border grid place-content-center'
           key={urlImage}
-          >
+        >
           <div className='relative group'>
             <img
               className='rounded-3xl md:w-full md:h-full md:object-cover'
