@@ -62,7 +62,7 @@ function Card() {
             />
             <div className='bg-black rounded-3xl w-full h-full absolute top-0 opacity-0 group-hover:opacity-50 transition-opacity'>
             </div>
-            <div className='text-white w-full h-full absolute top-0 justify-center items-center gap-5 flex opacity-0 group-hover:opacity-100 transition-opacity '>
+            <div className='text-white w-full h-full absolute top-0 justify-center items-center gap-5 flex opacity-0 group-hover:opacity-100 transition-opacity group-hover:visible invisible'>
               <a href={urlRepository} aria-label="Ver repositorio en GitHub">
                 <GithubIcon width={60} height={60} />
               </a>
@@ -118,11 +118,17 @@ function Card() {
           </span>
         </div>
         <div className='flex justify-center items-center gap-2 text-neutral-500 '>
-          <button onClick={navigatePrevious}>
-            <ArrowIcon className='dark:hover:text-white hover:text-black' width={40} height={40} />
+          <button
+            className='dark:hover:text-white dark:active:text-neutral-400 hover:text-black active:text-neutral-600'
+            onClick={navigatePrevious}
+          >
+            <ArrowIcon width={40} height={40} />
           </button>
-          <button onClick={navigateNext}>
-            <ArrowIcon className='dark:hover:text-white hover:text-black' width={40} height={40} transform="scale(-1 1)" />
+          <button
+            className='dark:hover:text-white dark:active:text-neutral-400 hover:text-black active:text-neutral-600'
+            onClick={navigateNext}
+          >
+            <ArrowIcon width={40} height={40} transform="scale(-1 1)" />
           </button>
         </div>
 
