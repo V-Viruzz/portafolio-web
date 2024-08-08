@@ -24,7 +24,6 @@ function Card() {
 
   }, [select])
 
-
   const toolIcons = {
     react: ReactIcon,
     tailwind: TailwindIcon,
@@ -47,11 +46,10 @@ function Card() {
   }
 
   return (
-    <div className='CardBorder w-full h-[42rem] md:h-[44rem] box-border p-[15px] rounded-3xl'>
-      <div className='Card w-full h-full rounded-2xl bg-[#1f1f1f] grid md:grid-rows-[3.5fr_2fr_1fr] sm:grid-rows-[4fr_2fr_1fr] grid-rows-[3fr_2fr_0.5fr_1fr] md:px-16 sm:px-11 px-7'>
-
+    <div className='CardBorder w-full h-[41rem] sm:h-[44rem] box-border p-[15px] rounded-[50px]'>
+      <div className='Card w-full h-full rounded-[35px] bg-[#1f1f1f] grid md:grid-rows-[3.5fr_2fr_1fr] sm:grid-rows-[4.5fr_2fr_1fr] grid-rows-[2.5fr_2.5fr_0.5fr_0.7fr] md:px-16 sm:px-11 p-7  '>
         <div
-          className='TransitionImage w-full box-border grid place-content-center'
+          className='TransitionImage w-full box-border grid place-content-center pb-[5%] md:pb-[3%]'
           key={urlImage}
         >
           <div className='relative group'>
@@ -117,7 +115,7 @@ function Card() {
             {id}
           </span>
         </div>
-        <div className='flex justify-center items-center gap-2 text-neutral-500 '>
+        <div className='flex justify-center items-end gap-2 text-neutral-500 '>
           <button
             className='dark:hover:text-white dark:active:text-neutral-400 hover:text-black active:text-neutral-600'
             onClick={navigatePrevious}
@@ -138,5 +136,3 @@ function Card() {
 }
 
 export default Card
-
-// text-wrap
