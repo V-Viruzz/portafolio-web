@@ -77,7 +77,7 @@ function Card() {
               <h3 className='text-2xl md:text-3xl font-bold'>
                 {name}
               </h3>
-              <p className='dark:text-[#999999] text-[#787878] text-md md:text-lg font-semibold w-[90%] my-3'>
+              <p className='dark:text-[#999999] text-[#4e4e4e] text-md md:text-lg font-semibold w-[90%] my-3'>
                 {description}
               </p>
             </div>
